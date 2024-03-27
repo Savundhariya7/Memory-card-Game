@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concentration Game</title>
+    <link rel="stylesheet" href="pai.css">
+    <script src="paiir.js" async></script>
+</head>
+<body>
+    <h1 class="page-title"> 𝓢𝓟𝓘𝓝 ~ & ~ 𝓜𝓐𝓣𝓒𝓗 </h1>
+    <div class="overlay-text visible">
+        <span>C</span>
+        <span>L</span>
+        <span>I</span>
+        <span>C</span>
+        <span>K</span>
+        <span>&nbsp;&nbsp;-&gt;&nbsp;&nbsp;</span>
+        <span>S</span>
+        <span>T</span>
+        <span>A</span>
+        <span>R</span>
+        <span>T</span>
+    </div>
+    <div id="game-over-text" class="overlay-text ">
+    
+        <span>G</span>
+        <span>A</span>
+        <span>M</span>
+        <span>E</span>
+        <span>&nbsp;&nbsp;</span>
+        <span>O</span>
+        <span>V</span>
+        <span>E</span>
+        <span>R</span>
+       
+        <div> <span class="overlay-text-small">Click To Restart</span> </div>
+    </div>
+        
+        
+      </div>
+      <div id="victory-text" class="overlay-text">
+         
+        <div class="bubbles">
+
+            <span style="--i:17;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:10">Ⓥ</span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:10">Ⓘ</span>
+            <span style="--i:20;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:10">Ⓒ</span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:16;">Ⓣ</span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:13;">Ⓞ</span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:16;">Ⓡ</span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:12;">Ⓨ</span>
+            <span style="--i:11;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+        </div>
+        
+      </div> 
+
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                ŦƗΜ€ <span id="time-remaining">500</span>
+            </div>
+            <div class="game-info">
+                𝓕𝓛𝓘𝓟𝓢 <span id="flips">0</span>
+            </div>
+        </div>
+        
+        <div class="card">
+        <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        
+        <div class="card-front card-face">
+             <img class="card-value" src="assets\dragon.png">
+        </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\vulpix.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty"  src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\teddy.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\sunny.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\puff.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\gold.jpg">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\fish.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\bitter.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\cake.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty"  src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\imgg4.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\dragon.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\vulpix.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+            <img class="kitty" src="assets\back.jpeg">
+        </div>
+        <div class="card-front card-face">
+            <img class="card-value" src="assets\teddy.png">
+       </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\sunny.png">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\puff.png">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\gold.jpg">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\fish.png">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\bitter.png">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\cake.png">
+           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="kitty" src="assets\back.jpeg">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="assets\imgg4.png">
+           </div>
+        </div>
+
+    
+    
+</body>
+</html>

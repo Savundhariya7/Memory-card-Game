@@ -1,0 +1,321 @@
+        
+@font-face{
+    font-family:"EDBWT";
+    src:url("assets\EDBWT.TTF") format("TTF")
+    }
+    
+    @font-face{
+        font-family:"EDBWT";
+        src:url("assets\EDBWT.TTF") format("TTF")
+        }
+    
+        *{
+            box-sizing: border-box;
+        }
+       html{
+        min-height: 100vh;
+        cursor: url("assets/ani971.ani"), auto;
+    
+       }
+        
+        body{
+            margin: 0;
+            background:radial-gradient(rgb(53, 1, 50),purple);
+            
+        }
+        .page-title{
+            color:lightgreen;
+            font-weight: bolder;
+            font-size:5em;
+            text-align:center;
+            margin-top:2%;
+            padding-top:2%;
+    
+    
+        }
+    
+        .game-info-container{
+             grid-column: 1/ -1;    /* first row correction*/
+             display:flex;
+             justify-content: space-between;
+    
+        }
+        .game-info{
+            color:gold;
+            font-size:2em;
+            font-weight: bold;
+            margin-bottom: 2%;
+            padding-bottom:2% ;
+            margin-top: 0;
+            padding:0;
+            
+        }
+    
+        .game-container{
+            display: grid;
+            grid-template-columns: repeat(5,auto);    /*Number of columns repeat */
+            grid-gap:10px;
+            margin:50px auto;
+            justify-content: center;
+            perspective: 500px;
+        }
+        
+        .card {
+            cursor: url();
+            background-color: black;
+            height: 150px;
+            width: 110px;
+            position: relative;
+            border-radius: 12px;
+            transition: transform 500ms ease-in, box-shadow 500ms ease-in-out;
+            transform-style: preserve-3d;
+            border: solid 3px rgb(241, 122, 241);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Initial glow effect */
+        }
+        
+        .card:hover {
+            box-shadow: 0 0 90px rgba(249, 158, 255, 0.8), 0 0 90px rgba(253, 77, 200, 0.8); /* Glowing effect on hover */
+            cursor:url();
+        }
+        
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            border-width:3px ;
+            border-color:violet;
+            border-style:dashed;
+            transition: transform 500ms ease-in-out;
+            transform-style: preserve-3d;
+        }
+        
+        .card-back{
+            background-color:black;
+            border-color:violet;
+        }
+    
+        .card-front{
+             background-color:violet;
+             border: 5px 5px;
+             border-style:outset;
+             border-color:blue;
+             transform: rotateY(180deg);
+        }
+        .card-value{
+            transition: transform 100ms ease-in-out;
+            transform:scale(0.9);
+        }
+    
+        .card-front:hover  .card-value{
+            transform:scale(1);
+    
+        }
+        
+        .kitty{
+            max-width: 100%;
+            max-height: 100%;
+            align-self:flex-start;
+            display: block;
+            margin:auto;
+            position:relative;
+            top:0;
+            transform: translateY(-10px);
+            
+        }
+    
+        .card.visible .card-back {
+            transform: rotateY(-180deg); 
+          }
+    
+        .card:hover .card-back{
+            transform:rotate(180deg);
+        }
+    
+        .card.visible .card-front {
+            transform: rotateY(0);
+        }
+         
+        .card:hover .card-front{
+            transform:rotate(-360deg);
+        }
+    
+        .card:hover .card-value{
+               
+               animation:dance 1s linear infinite 500ms;
+        }
+    
+        .card.matched .card-front .card-value {
+            animation: dance 1s linear infinite 500ms;
+          }
+        @keyframes dance{
+            0%, 100%{
+                transform: rotate(0);
+            }
+            25%{
+                transform: rotate(-20deg);
+            }
+            75%{
+                transform: rotate(20deg);
+            }
+        }
+        .card-back:hover .kitty{
+            transform: translateY(0);
+        }
+        .overlay-text {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            z-index: 1000;
+            color:aquamarine;
+            font-family: fantasy;
+            display: none;
+            transition: background-color 500ms, font-size 500ms;
+            
+        }
+        
+        .overlay-text.visible {
+            display: flex;
+            animation: overlay-grow 500ms forwards;
+        }
+    
+    
+        
+        .overlay-text >span{
+                   animation: glow 1s ease-in-out infinite;
+        }
+        
+        @keyframes glow{
+            0%, 100%{
+                color:white;
+                text-shadow: 0 0 12px violet , 0 0 50px violet, 0 0 100px violet;
+            }
+            10%, 90%{
+                color:red;
+                text-shadow: none;
+            }
+        }
+    
+        .overlay-text.visible {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay-text.visible span {
+            display: inline-block;
+            /* margin: 0 5px; Adjust the spacing between letters */
+        }
+        
+        .overlay-text > span:nth-child(6) {
+            margin-right:0; /* Adjust the spacing between "Click" and "~>" */
+        }
+        .overlay-text > span:nth-child(2){
+               animation-delay:0.25s;
+        }
+        .overlay-text > span:nth-child(3){
+            animation-delay:0.35s;
+        }
+        .overlay-text > span:nth-child(4){
+        animation-delay:0.45s;
+        }
+        .overlay-text > span:nth-child(5){
+        animation-delay:0.55s;
+         }
+        .overlay-text > span:nth-child(6){
+        animation-delay:0.65s;
+        }
+       .overlay-text > span:nth-child(7){
+        animation-delay:0.75s;
+       }
+       .overlay-text > span:nth-child(8){
+        animation-delay:0.85s;
+      }
+      .overlay-text > span:nth-child(9){
+        animation-delay:0.95s;
+      }
+      .overlay-text > span:nth-child(10){
+        animation-delay:1s;
+    }
+    
+    
+        .overlay-text-small {
+            font-size: 40px;
+            animation: none;
+          
+        }
+        
+        @keyframes overlay-grow {
+            from {
+                background-color: rgba(39, 8, 44, 0.9);
+                font-size:0;
+            }
+            to {
+                background-color: rgba(39, 8, 44, 0.9);
+                font-size: 8em;
+            }
+        }
+
+        .overlay-text.bubbles
+{
+    position:relative;
+    
+}   
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-delay: calc(0.4s * var(--i)); /* Use --i to vary the delay */
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-7vh) scale(0);
+    }
+    100% {
+        transform: translateY(60vh) scale(1);
+    }
+}
+
+    
+    @media(max-width:600px){
+        .game-container{
+            grid-template-columns: repeat(2,auto); 
+        }
+        .game-info-container{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+     
+        
+
+       
+
+        
+        
+    
+    
+                        
